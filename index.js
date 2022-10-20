@@ -1,46 +1,63 @@
-// TODO: Include packages needed for this application
+// packages needed for this application
 const inquirer=require('inquirer');
 const newReadmeFile = require('fs');
+const generateMarkdown=require('./utils/generateMarkdown');
 
+// function to initialize app
+function init() {
+// array of questions for user input
+     inquirer.prompt([
+          {
+          type: 'input',
+          message: 'What is your project title?',
+          name: 'title',
+          },
+          {
+               type:'input',
+               message:'Type some description for your project:-',
+               name:'description',
+          },
+          {
+               type:'input',
+               message:'Installation instructions:-',
+               name:'installation'
+          },
+          {
+               type:'input',
+               message:'Usage information:-',
+               name:'usage'
+          },
+          {
+               type:'input',
+               message:'Contribution guidelines:-',
+               name:'contribution'
+          },
+          {
+               type: 'input',
+               message: 'Enter is your github user name:',
+               name: 'github',
+          },
+          {
+               type: 'input',
+               message: 'Enter is your email address:',
+               name: 'email',
+          },
+     ])
 
-// TODO: Create an array of questions for user input
-const questions = [];
-inquirer.prompt([
-     {
-       type: 'input',
-       message: 'What is your name?',
-       name: 'userName',
-     },
-     {
-          type:'input',
-          message:'What languages do you know?',
-          name:'language',
-     },
-     {
-          type:'input',
-          message:'What is your preferred method of communication?',
-          name:'preferred'
-     }
-])
+     .then((input) =>
+          {
+               JSON.stringify(input);
+               writeToFile(newReadmeFile, input);
+          }
+     );
+}
 
-.then((input) =>
-     {
-          JSON.stringify(input);
-          writeToFile(newReadmeFile, input);
-     }
-);
-// TODO: Create a function to write README file
+// function to write README file
 function writeToFile(fileName, data) {
-     fileName.appendFile('README.md', `${data.userName}\n${data.language}\n${data.preferred}\n`, 
+     fileName.writeFile('README.md', generateMarkdown(data), 
      (err) => err ? console.error(err) : console.log('added to file!')
      );
-     }
+}
 
-
-// // TODO: Create a function to initialize app
-// function init() {
-
-// }
-
-// // Function call to initialize app
-// init();
+// Function call to initialize app
+init();
