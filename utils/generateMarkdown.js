@@ -17,7 +17,8 @@ function generateMarkdown(data) {
   ## Installation\n${data.installation}\n\n
   ## Usage\n${data.usage}\n\n
   ## Contribution\n${data.contribution}\n\n
-  [To visit my GitHub]( https://github.com/${data.github})`;
+  [To visit my GitHub]( https://github.com/${data.github})\n\n
+  ## Questions\nYou can email me if you have any questions [My email:](mailto:${data.email})`
 }
 
 module.exports = generateMarkdown;
