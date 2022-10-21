@@ -18,6 +18,12 @@ function init() {
                name:'description',
           },
           {
+               type: 'list',
+               name: 'license',
+               message: 'Select your licence type',
+               choices: ['APM','Bower','GitHub','NPM','Reuse','No License']
+          },
+          {
                type:'input',
                message:'Installation instructions:-',
                name:'installation'

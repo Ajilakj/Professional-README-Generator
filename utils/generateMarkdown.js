@@ -1,7 +1,24 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
-
+function renderLicenseBadge(license) {
+  let badge;
+  if(license==='APM'){
+    badge="https://shields.io/badge/license-MIT-green";
+  }
+  else if(license==='Bower'){
+    badge="https://shields.io/badge/license-MIT-green";
+  }
+  else if(license==='GitHub'){
+    badge="https://shields.io/badge/license-MIT-green";
+  }
+  else if(license==='NPM'){
+    badge="https://shields.io/badge/license-MIT-green";
+  }
+  else if(license==='GitLab'){
+    badge="https://shields.io/badge/reuse-compliant-green";
+  }
+  return badge;
+}
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {}
@@ -12,15 +29,18 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  let licenseBadge=renderLicenseBadge(data.license);
   return `# ${data.title}\n\n
   ## Table of Contents
   * [Description](#description)
+  * [License](#license)
   * [Installation](#installation)
   * [Usage](#usage)
   * [Contribution](#contribution)
   * [GitHub](#github)
   * [Questions](#questions)
   ## Description\n${data.description}\n\n
+  ## License\n${data.license} ![](${licenseBadge})\n\n
   ## Installation\n${data.installation}\n\n
   ## Usage\n${data.usage}\n\n
   ## Contribution\n${data.contribution}\n\n
