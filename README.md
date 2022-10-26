@@ -1,7 +1,7 @@
 # Professional README generator
 
-![](./Assets/images/Screenshot.png)
-[To view the demo]( https://drive.google.com/file/d/1oy56ihCyHF0vsD6TgXlGO8SZUGfNxBld/)
+![](./utils/readme.png)
+[To view the demo please click here]( https://drive.google.com/file/d/1oy56ihCyHF0vsD6TgXlGO8SZUGfNxBld/)
 
   ## Description
 This is a README generator. User can enter the project details using command line. Based on that input a README.md will generate. 
