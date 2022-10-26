@@ -60,7 +60,7 @@ function init() {
 
 // function to write README file
 function writeToFile(fileName, data) {
-     fileName.writeFile('README.md', generateMarkdown(data), 
+     fileName.writeFile('./utils/README.md', generateMarkdown(data), 
      (err) => err ? console.error(err) : console.log('added to file!')
      );
 }
