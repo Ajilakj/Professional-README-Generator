@@ -1,39 +1,25 @@
-# Project one
+# Proffessional README generator
 
 
-  ## Table of Contents
-  * [Description](#description)
-  * [License](#license)
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [Contribution](#contribution)
-  * [GitHub](#github)
-  * [Questions](#questions)
   ## Description
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima saepe rem tenetur quaerat quos nam, quia, numquam officiis officia quidem hic, sit tempora adipisci quo eum reprehenderit. Doloribus, illum iure?
+This is a README generator. User can enter the project details using command line. Based on that input a README.md will generate. 
+
+  ## Usage
+* To use this app the first command is node index
+* Then user can enter project name, description
+* User can select a licence ype from the list. Based on the selection licence icon and link will be in the README.md
+* A table of content also in the README which help the user to navigate each section easily
+* The user can enter his/her github user name and email. Both will became link in README so they can easily go to the github page and email app
 
 
   ## License
-Reuse ![](https://shields.io/badge/reuse-compliant-green)
-[License link]( https://shields.io/badge/reuse-compliant-green)
-https://shields.io/badge/reuse-compliant-green
+N/A
 
 
   ## Installation
 N/A
 
 
-  ## Usage
-N/A
 
 
-  ## Contribution
-Developer 1, Developer 2
-
-
-  ## GitHub
-[To visit my GitHub]( https://github.com/Ajilakj)
-
-
-  ## Questions
-You can email me if you have any questions [My email:](mailto:kjajila@gmail.com)
+ 
