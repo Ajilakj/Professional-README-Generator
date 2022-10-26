@@ -14,7 +14,7 @@ This is a README generator. User can enter the project details using command lin
 * The user can enter his/her github user name and email. Both will became link in README so they can easily go to the github page and email app
 
 
-  ## License
+## License
 N/A
 
 
